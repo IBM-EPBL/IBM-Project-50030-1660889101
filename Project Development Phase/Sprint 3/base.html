@@ -8,9 +8,6 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
       .bar {
@@ -31,29 +28,29 @@
         font-style: normal;
         padding-right: 20px;
       }
-      a:hover {
-        background-color: black;
-        color: white;
-        border-radius: 15px;
-        font-size: 30px;
-        padding-left: 10px;
-      }
       body {
-        background-image: url("https://spectrum.ieee.org/media-library/nurses-put-a-nasal-swab-into-a-tube-after-swabbing-a-patient-in-their-car-at-penn-state-health-st-joseph-medical-center-in-bern-township-pa.jpg?id=25591273");
         background-size: cover;
       }
     </style>
   </head>
 
   <body>
-    <div class="bar">
-      <a href="/upload">Predict</a>
-      <a href="/info">Info</a>
-      <a href="/about">Home</a>
-      <br />
-    </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container"></div>
+    <nav class="navbar navbar-inverse" style="padding: 10px">
+      <div
+        class="container-fluid"
+        style="display: flex; justify-content: space-between; width: 100%"
+      >
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Water Quality Prediction</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/about">Home</a></li>
+            <li><a href="/info">Info</a></li>
+            <li><a href="/predict">Predict</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <div class="container">
       <div id="content" style="margin-top: 2em">
