@@ -4,7 +4,6 @@ from flask import Flask,request,render_template
 import pickle
 import requests
 
-
 app= Flask(__name__)
 model_path = os.path.join(os.path.dirname(__file__), "model/ibm.pkl")
 model = pickle.load(open(model_path, 'rb')) # loading the trained model
@@ -27,13 +26,11 @@ def upload():
     if request.method=='POST':
         init_features = [float(x) for x in request.form.values()]
 
-        payload_scoring = {"input_data": 
-			[{"field": [["f0", "f1","f2","f3","f4","f5"]], 
-                "values": [init_features]}]}
-        pred = model.predict(init_features)
+        pred = model.predict([init_features])
 
+        print(pred)
 
-        output = pred[0]['values'][0][0]
+        output = pred[0]
         return render_template("result.html",prediction='The WQI predicted is {:.2f}'.format(output))
 
     else:
@@ -41,6 +38,6 @@ def upload():
 
 
 if __name__=="__main__":
-    app.run(debug=False,port=5500)
+    app.run(debug=True,port=5500)
             
             

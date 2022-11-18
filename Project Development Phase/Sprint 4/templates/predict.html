@@ -4,16 +4,8 @@
   <center>Water Quality Predictor</center>
 </h2>
 <div>
-  <form id="upload-file" method="post" enctype="multipart/form-data">
+  <form id="predict" method="post" action="/predict">
     <center>
-      <input
-        type="text"
-        name="year"
-        id=""
-        placeholder="Enter Year"
-        style="display: block"
-      />
-      <br />
       <input
         type="text"
         name="do"
@@ -68,16 +60,10 @@
       />
       <br />
       <br />
-      <button type="button" class="btn btn-primary btn-lg" id="btn-predict">
-        Predict!
-      </button>
+      <input type="submit" value="Submit" />
     </center>
   </form>
-
-  <div class="loader" style="display: none"></div>
-  <h2 style="color: white" id="result">
-    <span> </span>
-  </h2>
+  <script />
 </div>
 
 {% endblock %}
